@@ -10,8 +10,8 @@ import org.springframework.test.context.ActiveProfiles;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@ActiveProfiles("test")
-@SpringBootTest(classes = DemoSpringConfigApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@SpringBootTest(classes = DemoSpringConfigApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT,
+		properties = { "levelNumber=2" })
 class DemoSpringConfigApplicationTests {
 
 	@LocalServerPort
